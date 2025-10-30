@@ -1,0 +1,38 @@
+version: '3.3'
+
+services:
+
+  db:
+    image: A COMPLETER
+    container_name: srvmysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+        
+    networks:
+      - A COMPLETER
+
+
+  web:
+    build: A COMPLETER
+    container_name: lamp
+    depends_on:
+      - db
+    restart: always
+    networks:
+      - A COMPLETER
+    volumes:
+      - type: volume
+        source: A COMPLETER
+        target: A COMPLETER
+    ports:
+      - A COMPLETER
+    links:
+      - "db:srvmysql"
+
+networks:
+  A COMPLETER
+    
+volumes:
+  A COMPLETER
+        
